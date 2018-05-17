@@ -1,0 +1,153 @@
+.divider-line-hr {
+  position: relative;
+  border-bottom: solid 2px #34000d; }
+  .divider-line-hr::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #1b0007;
+    bottom: -3px;
+    left: 0; }
+
+.gold-fonts {
+  background-image: -webkit-linear-gradient(top, #efd100 0, #e2a233 38%, #f0c328 60%, #fff1a3 86%, #ffe13e 100%);
+  background-size: 1em 1em;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-border-color: black;
+  color: #f8b700; }
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url("../img/bg-dark.png");
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 14px;
+  color: #fff; }
+
+.uk-container {
+  max-width: 1150px; }
+
+.mobile-navigation {
+  background: url("../img/bg-red.png"); }
+  .mobile-navigation ul li a {
+    color: #fff !important; }
+  .mobile-navigation ul li .bookmark-info {
+    font-size: 9px; }
+
+.download-page .download-button {
+  -webkit-transition: all 0s ease-out;
+  -moz-transition: all 0s ease-out;
+  -o-transition: all 0s ease-out;
+  -ms-transition: all 0s ease-out;
+  transition: all 0s ease-out;
+  width: 300px;
+  height: 40px;
+  display: block;
+  color: #000;
+  text-decoration: none;
+  text-align: center;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+  line-height: 40px;
+  margin: 10px auto;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background: #d4af37; }
+.download-page .android {
+  border-left: solid 1px #c90;
+  -webkit-box-shadow: 0px 4px 0px 0px #c90;
+  box-shadow: 0px 4px 0px 0px #c90; }
+
+.bookmarks-guide {
+  background: url("../img/bg-dark.png");
+  color: #fff; }
+
+.fab {
+  text-rendering: optimizeLegibility; }
+
+.form-wrapper {
+  background: url("../img/bg-dark.png"); }
+
+header .topbar-menu {
+  background: url("../img/bg-red.png");
+  border-bottom: solid 3px #d4af37;
+  height: 60px; }
+  header .topbar-menu a {
+    height: 40px;
+    font-weight: 900;
+    color: #d4af37;
+    position: relative;
+    border-right: solid 2px #34000d; }
+    header .topbar-menu a::after {
+      position: absolute;
+      content: '';
+      width: 2px;
+      height: 100%;
+      background: #1b0007;
+      right: -3px;
+      top: 0; }
+
+.footer-contact {
+  background-color: black; }
+  .footer-contact p {
+    margin-bottom: 0;
+    background-image: -webkit-linear-gradient(top, #efd100 0, #e2a233 38%, #f0c328 60%, #fff1a3 86%, #ffe13e 100%);
+    background-size: 1em 1em;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-border-color: black;
+    color: #f8b700; }
+
+.footer-intro {
+  background: url("../img/bg-red.png");
+  border-top: solid 3px #d4af37;
+  position: relative;
+  border-bottom: solid 2px #34000d; }
+  .footer-intro::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #1b0007;
+    bottom: -3px;
+    left: 0; }
+  .footer-intro h1 {
+    background-image: -webkit-linear-gradient(top, #efd100 0, #e2a233 38%, #f0c328 60%, #fff1a3 86%, #ffe13e 100%);
+    background-size: 1em 1em;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-border-color: black;
+    color: #f8b700;
+    font-weight: 900; }
+  .footer-intro p {
+    text-align: justify;
+    text-align-last: center; }
+    .footer-intro p a {
+      color: #d4af37;
+      font-weight: 900; }
+      .footer-intro p a:hover {
+        text-decoration: none;
+        background-image: -webkit-linear-gradient(top, #efd100 0, #e2a233 38%, #f0c328 60%, #fff1a3 86%, #ffe13e 100%);
+        background-size: 1em 1em;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-border-color: black;
+        color: #f8b700; }
+
+.footer-copyrights {
+  padding: 10px 15px;
+  background: url("../img/bg-red.png"); }
+  .footer-copyrights p {
+    margin-bottom: 0; }
+
+/*# sourceMappingURL=style.css.map */

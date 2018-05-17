@@ -1,0 +1,272 @@
+$background-color: #231f20;
+$primary-color: rgba(223, 190, 106, 0.7);
+$secondary-color: #5a0206;
+$border-color: rgba(223, 190, 106, .3);
+$background-pattern: url('https://res.cloudinary.com/globalcdn/image/upload/v1523747545/stationbet/bg-pattern-3.png');
+$primary-pattern: url('https://res.cloudinary.com/globalcdn/image/upload/v1523747545/stationbet/bg-pattern-2.png');
+$heading-font: 'Teko', sans-serif;
+$general-font: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+$breakpoints:(
+  'phone': 425px, 
+  'tablet': 768px, 
+  'desktop': 1024px,
+  'hd': 1440px
+);
+
+@mixin respond-to($breakpoint) {
+  $value: map-get($breakpoints, $breakpoint);
+  @if $value != null {
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+  @else {
+    @warn "No value in `#{$breakpoint}`." + "Make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+  padding: 0;
+  background: #000;
+  font: {
+    family: $general-font;
+    weight: 300;
+  }
+  text-transform: uppercase;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font !important;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: $general-font;
+  text-transform: uppercase;
+}
+
+a {
+  color: $primary-color;
+  text-transform: uppercase;
+	&:hover {
+    color: #fff;
+		text-decoration: none;
+	}
+}
+
+.primary-button {
+  display: inline-block;
+  margin: 10px auto;
+  padding: 8px 70px 10px;
+  background: linear-gradient(270deg, rgba(223,190,106,0.8), rgba(146,111,52,0.8), rgba(34,34,34,0), rgba(34,34,34,0));
+	background: {
+		position: 1% 50%;
+		size: 300% 300%;
+	}
+  font: {
+    family: $general-font;
+    size: .625rem;
+    weight: 500;
+    style: normal;
+  }
+  color: $primary-color;
+  text: {
+    align: center;
+    transform: uppercase;
+  }
+  letter-spacing: .4em;
+	border: solid 1px $border-color;
+	border-radius: 0;
+	transition: all .7s ease-out;
+	&:hover {
+		color: #fff;
+		border: solid 1px rgba(223,190,106,0);
+		background-position: 99% 50%;
+	}
+}
+
+.main-navigation {
+  padding: 15px 0;
+  background: rgba(87, 0, 0, 0.5) $background-pattern;
+  border-bottom: solid 1px $border-color;
+  ul > li {
+    height: 50px;
+    border-right: solid 1px $border-color;
+    line-height: 50px;
+    &:hover {
+      background: linear-gradient(rgba(223, 190, 106,.1),rgba(35, 31, 32, .5)), $primary-pattern;
+    }
+  }
+  .desktop-nav {
+    a {
+      height: 40px;
+      margin: 5px 0;
+      font: {
+        family: $heading-font;
+        size: .8rem;
+        weight: 900;
+      }
+      color: $primary-color;
+      transition: all 0.7s ease-out;
+      &:hover {
+        color: $secondary-color;
+      }
+      @include respond-to(hd) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .contact-bar {
+    ul > li {
+      height: 50px;
+      margin: 5px 2px;
+      color: $primary-color;
+      border: 0;
+      cursor: pointer;
+      font: {
+        size: .79rem;
+        family: $heading-font;
+        weight: 900;
+      }
+      &:hover {
+        color: $secondary-color;
+      }
+      @include respond-to(hd) {
+        margin: 5px 10px;
+        font-size: 1.1rem;
+      }
+      .fab {
+        margin-right: 5px !important;
+        @include respond-to(hd) {
+          margin-right: 20px !important;
+        }
+      }
+    }
+  }
+  .mobile-nav {
+    li {
+      height: 50px;
+      a {
+        height: 50px;
+        margin: 0 10px;
+        color: $primary-color;
+      }
+    }
+    .mobile-dropdown {
+      padding: 20px;
+      background: $background-pattern;
+      border: solid 1px $border-color;
+      ul > li {
+        height: auto;
+        margin: 5px;
+        line-height: 25px;
+        font: {
+          family: $heading-font;
+          weight: 900;
+        }
+        color: $primary-color;
+        a {
+          height: auto;
+          margin: 0 5px;
+          padding: 0;
+          line-height: 25px;
+        }
+      }
+    }
+  }
+}
+
+.frame-wrapper {
+  width: 100%;
+  height: auto;
+  .frame-content {
+    width: 100%;
+    height: 760px;
+  }
+  .frame-mobile {
+    height: 440px;
+  }
+}
+
+.sign-up-form-wrapper {
+  padding: 15px;
+  padding-bottom: 0;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+  background-size: contain;
+  background: $background-pattern;
+  border: solid 1px $border-color;
+  h2 {
+    margin: 5px 0 10px 0;
+    font: {
+      family: $heading-font;
+      size: 1.5rem;
+      weight: 900
+    }
+    color: $primary-color;
+  }
+  .cta-register {
+    p {
+      font-size: .575rem;
+      letter-spacing: .2em;
+    }
+  }
+}
+
+.frame-mobile {
+  .content {
+    padding: 15px;
+    text-align: left;
+    .intro {
+      font: {
+        family: $heading-font;
+        weight: 900;
+        size: .825rem;
+      }
+      color: $primary-color;
+      text-align: center;
+      line-height: 20px;
+    }
+    img {
+      margin-left: 15px;
+    }
+    #content-android,
+    #content-ios {
+      font-size: 12px;
+      color: #fff;
+      text-align: left;
+      letter-spacing: 0;
+    }
+    .download {
+      margin: 15px 0;
+      text-align: left;
+      .btn-ios a,
+      .btn-android a {
+        display: block;
+        padding: 5px 0;
+        background: #e6c12e url() no-repeat 4px 4px; color: #000000;
+        font: {
+          family: $heading-font;
+          size: 18px;
+        }
+        text-align: center;
+        text-decoration: none;
+        line-height: 24px;
+        border: solid 5px;
+        border-radius: 10px;
+        border-color: #ffcc33 #cc9900 #cc9900 #ffcc33;
+      }
+    }
+    .download div {
+      margin-bottom: 5px;
+    }
+    .download span {
+      font-size: 11px;
+    }
+  }
+}

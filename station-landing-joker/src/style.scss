@@ -7,6 +7,24 @@ $product-icon: url('https://res.cloudinary.com/globalcdn/image/upload/v152374754
 $bank-icon: url('https://res.cloudinary.com/globalcdn/image/upload/v1523747545/stationbet/bank-icon-sprites.png');
 $heading-font: 'Teko', sans-serif;
 $general-font: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+$breakpoints:(
+  'phone': 425px, 
+  'tablet': 768px, 
+  'desktop': 1024px,
+  'hd': 1440px
+);
+
+@mixin respond-to($breakpoint) {
+  $value: map-get($breakpoints, $breakpoint);
+  @if $value != null {
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+  @else {
+    @warn "No value in `#{$breakpoint}`." + "Make sure it is defined in `$breakpoints` map.";
+  }
+}
 
 h1,
 h2,
@@ -83,7 +101,7 @@ body {
     -o-background-size: cover;
   background-size: cover;
   font: {
-    family: $general-font;
+    font-family: $general-font;
     weight: 300;
     style: normal;
   }
@@ -136,12 +154,11 @@ body {
     background: rgba(87, 0, 0, 0.5);
     font: {
       family: $general-font;
-      size: .894rem;
-      weight: bold;
+      size: .634rem
     }
     color: $primary-color;
     text-align: right;
-    letter-spacing: 0;
+    letter-spacing: .19em;
     > span {
       margin-right: 13px;
     }
@@ -217,22 +234,6 @@ body {
         background: linear-gradient(rgba(223, 190, 106,.1),rgba(35, 31, 32, .5));
       }
     }
-    .sub-level-1 {
-      padding: 10px;
-      background: $alt-bg-pattern !important;
-      > ul > li {
-        a {
-          font: {
-            family: $heading-font;
-            size: 1rem;
-            weight: 900;
-            style: normal;
-          }
-          color: $primary-color;
-          transition: all 0.7s ease-out;
-        }
-      }
-    }
   }
   .desktop-nav-dropdown {
     background-color: $background-color;
@@ -274,7 +275,19 @@ body {
   }
 }
 
-
+.frame-content {
+  overflow: hidden;
+  iframe {
+    width: 102%;
+    height: 430px;
+    @include respond-to(tablet) {
+      height: 930px;
+    }
+    @include respond-to(desktop) {
+      height: 1230px;
+    }
+  }
+}
 
 footer {
   background-color: rgba(0, 0, 0, .7);
@@ -473,71 +486,6 @@ footer {
   }
 }
 
-.frame-container {
-  .frame-content {
-    li {
-      a {
-        font: {
-          family: $heading-font;
-          size: .825rem;
-          weight: 900;
-        }
-      }
-    }
-  }
-  .frame-content-mobile {
-    .content {
-      padding: 15px;
-      text-align: left;
-      .intro {
-        font: {
-          family: $heading-font;
-          weight: 900;
-          size: .825rem;
-        }
-        color: $primary-color;
-        text-align: center;
-        line-height: 20px;
-      }
-      img {
-        margin-left: 15px;
-      }
-      #content-android,
-      #content-ios {
-        font-size: 12px;
-        color: #fff;
-        letter-spacing: 0;
-      }
-      .download {
-        margin: 15px 0;
-        text-align: left;
-        .btn-ios a,
-        .btn-android a {
-          display: block;
-          padding: 5px 0;
-          background: #e6c12e url() no-repeat 4px 4px; color: #000000;
-          font: {
-            family: $heading-font;
-            size: 18px;
-          }
-          text-align: center;
-          text-decoration: none;
-          line-height: 24px;
-          border: solid 5px;
-          border-radius: 10px;
-          border-color: #ffcc33 #cc9900 #cc9900 #ffcc33;
-        }
-      }
-      .download div {
-        margin-bottom: 5px;
-      }
-      .download span {
-        font-size: 11px;
-      }
-    }
-  }
-}
-
 .sign-up-form-wrapper {
   padding: 15px;
   padding-bottom: 0;
@@ -552,208 +500,5 @@ footer {
       font-size: .575rem;
       letter-spacing: .2em;
     }
-  }
-}
-
-iframe {
-  opacity: 1;
-  transition: opacity 1s;
-}
-
-iframe[data-src] {
-  opacity: 0;
-}
-
-.frame-content {
-  background: #000;
-}
-
-.header-container {
-  width: 100%;
-  height: 223px;
-  background: #000 url('img/bg_landing.png') repeat-x 0 0;
-  .header-content {
-    width: 1003px;
-    margin: auto;
-    padding: 5px;
-    overflow: hidden;
-  }
-  .login-container {
-    position: absolute;
-    width: 435px;
-    height: 110px;
-    margin: 10px 0 0 448px;
-    background: #dadada;
-    .login-box {
-      padding: 10px 10px 0 10px;
-      input:focus {
-        outline: none;
-      }
-      .input-text {
-        width: 148px;
-        height: 25px;
-        margin: 0;
-        padding: 0;
-        background-color: #fff;
-        color: #333;
-        border: 0
-      }
-      #divloginid,
-      #divloginpw {
-        float: left;
-        width: 148px;
-        height: 26px;
-        margin: 0 5px 5px 0;
-        padding-left: 35px;
-        background: #fff url('img/bg_icon.png') no-repeat 5px -297px;
-        border: solid 1px #a1a1a1;
-      }
-      #divloginpw {
-        background: #fff url('img/bg_icon.png') no-repeat 5px -327px;
-      }
-      #divlogincc {
-        float: left;
-        width: 98px;
-        height: 26px;
-        margin-bottom: 5px;
-        padding-left: 10px;
-        background: #fff;
-        border: solid 1px #a1a1a1;
-      }
-      #divcapcha {
-        float: left;
-        width: 110px;
-        height: 28px;
-        margin-bottom: 5px;
-        img {
-          width: 110px;
-          height: 28px;
-        }
-      }
-      #divsubmit {
-        float: right;
-        width: 110px;
-        height: 61px;
-        line-height: 61px;
-        a#btn-login {
-          width: 100%;
-          height: 61px;
-          background: #e6c12e;
-          font-weight: bold;
-          text-align: center;
-          color: #000;
-          border: 0;
-          text-transform: uppercase;
-          cursor: pointer;
-        }
-      }
-      #divlogincc .input-text {
-        width: 98px;
-      }
-    }
-  }
-  .head-top {
-    height: 130px;
-    padding-top: 15px;
-  }
-  .head-logo-right {
-    float: right;
-    margin-left: 10px;
-  }
-  .head-info {
-    position: absolute;
-    width: 973px;
-    height: 35px;
-    margin: 0;
-    padding: 0 15px;
-    background: #d2d2d2;
-    font-weight: bold;
-    line-height: 35px;
-    border-radius: 17px;
-  }
-  .head-info .head-time {
-    float: left;
-    margin-top: 2px;
-    font-size: 12px;
-    font-family: Arial,Helvetica,sans-serif;
-    color: #000;
-    letter-spacing: 0;
-  }
-  .head-link {
-    float: right;
-    .head-lang {
-      position: relative;
-      width: auto;
-      padding-top: 0;
-      font-weight: bold;
-      z-index: 100;
-      > ul {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-        > li {
-          margin: 0 15px;
-          float: left;
-          position: relative;
-        }
-      }
-    }
-    a {
-      display: block;
-      width: 25px;
-      height: 25px;
-      margin-top: 5px;
-      padding-right: 5px;
-      background: url('img/bg_lang_flag.png') no-repeat -295px 0;
-      text-decoration: none;
-    }
-  }
-}
-
-.head-menu {
-  width: 1010px;
-  height: 53px;
-  margin: 40px 0 0 -1px;
-  > ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    > li {
-      position: relative;
-      float: left;
-      width: 167.5px;
-      font: bold 16px;
-      text-align: center;
-      > a {
-        display: block;
-        height: 53px;
-        background: url('img/bg_menu.png') no-repeat 0 0;
-        color: #fff;
-        line-height: 50px;
-        text-decoration: none;
-        cursor: pointer;
-        &.on{
-          background-position: 0 -60px;
-          color: #000;
-        }
-      }
-    }
-  }
-  span {
-    display: block;
-    height: 53px;
-    background: url('img/bg_menu.png') no-repeat 0 0;
-    color: #fff;
-    text-decoration: none;
-    line-height: 50px;
-  }
-}
-
-#main-content {
-  max-width: 1005px;
-  margin: 0 auto;
-  margin
-  #framemain {
-    background-color: transparent;
   }
 }

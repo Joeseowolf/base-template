@@ -55,14 +55,14 @@
           </div>
         </div>
       </header>
-      <nav class="main-navigation uk-container uk-navbar uk-container uk-navbar-transparent uk-padding-remove-horizontal">
+      <nav class="main-navigation uk-container uk-navbar-container uk-container uk-navbar-transparent uk-padding-remove-horizontal" uk-navbar>
         <div class="navigation-mobile uk-navbar-center uk-inline uk-hidden@m"><a class="mobile-nav-icon uk-navbar-toggle" href="#"><span uk-navbar-toggle-icon></span><span class="uk-margin-small-left">Navigasi Situs</span></a>
           <div class="mobile-dropdown" uk-dropdown="mode: click; offset: 0; boundary-align: true; pos: bottom-justify; boundary: .main-navigation; animation: uk-animation-slide-top-small; duration: 1000">
             <div class="uk-nav-header">GAME SELECT</div>
             <ul class="uk-nav uk-dropdown-nav">
-              <li><a href="/s128"><span class="uk-icon uk-icon-image uk-margin-right" style="background-image:url('img/s128.png'); background-size: contain;"></span>S128</a></li>
-              <li> <a href="/sv388"><span class="uk-icon uk-icon-image uk-margin-right" style="background-image:url('img/sv388.png'); background-size: contain;"></span>SV388</a></li>
-              <li><a href="/cft2288"><span class="uk-icon uk-icon-image uk-margin-right" style="background-image:url('img/cft2288.png'); background-size: contain;"></span>CFT2288</a></li>
+              <li><a href="http://www.dj128.net" target="_blank" rel="nofollow"><span class="uk-icon uk-icon-image uk-margin-right" style="background-image:url('img/s128.png'); background-size: contain;"></span>S128</a></li>
+              <li> <a href="http://www.vn3979.net" target="_blank" rel="nofollow"><span class="uk-icon uk-icon-image uk-margin-right" style="background-image:url('img/sv388.png'); background-size: contain;"></span>SV388</a></li>
+              <li><a href="http://id.cft2288.com" target="_blank" rel="nofollow"><span class="uk-icon uk-icon-image uk-margin-right" style="background-image:url('img/cft2288.png'); background-size: contain;"></span>CFT2288</a></li>
               <div class="uk-nav-divider"></div>
             </ul>
             <ul class="uk-nav uk-dropdown-nav">
@@ -70,15 +70,6 @@
               <li><a href="/"><span class="uk-margin-right" uk-icon="home"></span>HOME</a></li>
               <li><a href="#sign-up-form" uk-toggle><span class="uk-margin-right" uk-icon="file-edit"></span>DAFTAR</a></li>
               <li><a href="http://www.stationbet.com/promo" rel="nofollow" target="_blank"><span class="uk-margin-right" uk-icon="star"></span>PROMO</a></li>
-              <li><a href=""><span class="uk-margin-right" uk-icon="download"></span>DOWNLOAD</a>
-                <div class="sub-level-1" uk-dropdown="mode: click; offset: 0; boundary-align: true; pos: bottom-justify; boundary: .main-navigation; animation: uk-animation-slide-top-small; duration: 1000">
-                  <ul class="uk-nav uk-dropdown-nav">
-                    <li class="uk-nav-header">Download</li>
-                    <li><a href="http://mobile.m128.net/updates.html" rel="nofollow noindex">S128 ANDROID</a></li>
-                    <li><a href="http://www.dj128.net/Mobile/get_ios.aspx" rel="nofollow noindex">S128 iOS</a></li>
-                  </ul>
-                </div>
-              </li>
               <li><a href="/blog"><span class="uk-margin-right" uk-icon="question"></span>BLOG</a></li>
               <li class="uk-nav-divider"></li>
               <li class="uk-nav-header">Contact Us</li>
@@ -100,9 +91,30 @@
             <li><a href="/blog">BLOG</a></li>
           </ul>
           <ul class="uk-navbar-nav">
-            <li><a href="/s128">S128</a></li>
-            <li><a href="/sv388">SV388</a></li>
-            <li><a href="/cft2288">CFT2288</a></li>
+            <li>
+              <a href="http://www.dj128.net" target="_blank" rel="nofollow">LOGIN S128</a>
+              <div class="sub-level-1 uk-navbar-dropdown">
+                <ul class="uk-nav uk-dropdown-nav">
+                  <li><a href="/s128">AGEN S128</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="http://www.vn3979.net" target="_blank" rel="nofollow">LOGIN SV388</a>
+              <div class="sub-level-1 uk-navbar-dropdown">
+                <ul class="uk-nav uk-dropdown-nav">
+                  <li><a href="/sv388">AGEN SV388</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="http://id.cft2288.com" target="_blank" rel="nofollow">LOGIN CFT2288</a>
+              <div class="sub-level-1 uk-navbar-dropdown">
+                <ul class="uk-nav uk-dropdown-nav">
+                  <li><a href="/cft2288">AGEN CFT2288</a></li>
+                </ul>
+              </div>
+            </li>
           </ul>
         </div>
       </nav>

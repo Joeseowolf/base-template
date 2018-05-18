@@ -1,4 +1,4 @@
-@import('../var/_screen-size')
+@import 'screen-size';
 
 @mixin respond-to($breakpoint) {
   $value: map-get($breakpoints, $breakpoint);

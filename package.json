@@ -8,10 +8,7 @@
     "start": "gulp",
     "build": "webpack"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JSSTG/localserver.git"
-  },
+  "repository": "git+https://github.com/JSSTG/localserver.git",
   "author": "JS",
   "license": "ISC",
   "bugs": {
@@ -23,6 +20,8 @@
     "gulp": "^3.9.1",
     "gulp-util": "^3.0.8",
     "path": "^0.12.7",
+    "pug": "^2.0.3",
+    "pug-cli": "^1.0.0-alpha6",
     "webpack": "^4.8.3",
     "webpack-cli": "^2.1.3"
   }

@@ -1,4 +1,4 @@
-@import 'variables';
+@import '../variables';
 
 @mixin screen-reader-text() {
   position: absolute;
@@ -21,11 +21,10 @@
   hyphens: auto;
 }
 
-@mixin heading-text {
-  width: 100%;
-  font-family: $header-font;
-  color: $main-color;
-  > * {
-    color: $secondary-color;
+@function headings($from:1, $to:6) {
+  @if $from == $to {
+    @return 'h#{$from}';
+  } @else {
+    @return 'h#{$from},' + headings($from+1, $to);
   }
 }

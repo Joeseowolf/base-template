@@ -6,5 +6,5 @@ gulp.task('default', function () {
     proxy: 'http://localhost:80/dist'
   });
   gulp.watch("dist/index.html").on("change", bs.reload);
-  gulp.watch("dist/style.css").on("change", bs.reload);
+  gulp.watch("dist/css/main.css").on("change", bs.reload);
 });

@@ -29,4 +29,3 @@ gulp.task('watch', ['auto-reload', 'pug'], function() {
   gulp.watch('src/*.pug', ['pug']);
   gulp.watch('dist/css/*.css').on('change', browserSync.reload);
 });
-

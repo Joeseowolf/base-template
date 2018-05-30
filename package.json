@@ -1,12 +1,11 @@
 {
-  "name": "localserver",
+  "name": "HTML5 Base Template",
   "version": "1.0.0",
-  "description": "landing-page",
+  "description": "Template for HTML5 website using pug & sass",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp",
-    "build": "webpack"
   },
   "repository": "git+https://github.com/JSSTG/localserver.git",
   "author": "JS",
@@ -18,12 +17,14 @@
   "devDependencies": {
     "browser-sync": "^2.24.4",
     "gulp": "^3.9.1",
+    "gulp-plumber": "^1.2.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^1.2.3",
     "gulp-util": "^3.0.8",
+    "gulp-watch": "^5.0.0",
     "path": "^0.12.7",
     "pug": "^2.0.3",
     "pug-cli": "^1.0.0-alpha6",
-    "uikit": "^3.0.0-rc.2",
-    "webpack": "^4.8.3",
-    "webpack-cli": "^2.1.3"
+    "pug-php-filter": "0.0.1",
   }
 }

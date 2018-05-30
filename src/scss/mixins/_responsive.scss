@@ -1,5 +1,3 @@
-@import 'screen-size';
-
 @mixin respond-to($breakpoint) {
   $value: map-get($breakpoints, $breakpoint);
   @if $value != null {
